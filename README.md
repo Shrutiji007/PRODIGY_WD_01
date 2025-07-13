@@ -33,6 +33,6 @@
 
 ---
 
-##👩‍💻 Author
+## 🧑‍💻 Author
 
-Made with ❤️ by [Shruti](https://github.com/Shrutiji007)
+Made with ❤️ by [Shruti](https://github.com/Shrutij007)
