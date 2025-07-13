@@ -30,15 +30,6 @@
 - JavaScript (Vanilla)  
 - LocalStorage (for saving cart state)
 
----
-
-## 🗂️ Folder Structure
-PRODIGY_WD_01/
-|
-├── index.html
-├── style.css
-├── script.js
-└── /images
 
 ---
 
