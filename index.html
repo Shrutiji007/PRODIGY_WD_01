@@ -13,21 +13,25 @@
   <header id="navbar">
     <div class="logo">Sweet Scoops 🍦</div>
     <div class="hamburger" onclick="toggleMenu()">☰</div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#why">Why Us</a></li>
-        <li><a href="#cart">Cart</a></li>
-        <li><a href="#checkout">Checkout</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="nav-actions">
-      <button class="order-btn" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Order Now</button>
-      <button class="profile-btn">👤 Profile</button>
+
+    <div class="nav-menu" id="nav-menu">
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#why">Why Us</a></li>
+          <li><a href="#cart">Cart</a></li>
+          <li><a href="#checkout">Checkout</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="order-btn" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Order Now</button>
+        <button class="profile-btn">👤 Profile</button>
+      </div>
     </div>
   </header>
+
 
   <section id="home" class="hero fullpage">
     <h1>Scoops of Happiness, One Cone at a Time</h1>
@@ -88,6 +92,14 @@
   </section>
 
   <canvas id="confetti"></canvas>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('nav-menu');
+      menu.classList.toggle('show');
+    }
+  </script>
+
   <script src="script.js"></script>
 
   <footer class="site-footer">

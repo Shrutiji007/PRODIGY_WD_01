@@ -233,14 +233,14 @@ window.addEventListener('scroll', () => {
 });
 
 function toggleMenu() {
-  const navList = document.querySelector("nav ul");
-  navList.classList.toggle("show");
+  const menu = document.getElementById('nav-menu');
+  menu.classList.toggle('show');
 }
 
 document.querySelectorAll('nav ul li a').forEach(link => {
   link.addEventListener('click', () => {
-    const navList = document.querySelector('nav ul');
-    navList.classList.remove('show'); // hides the menu again
+    const menu = document.getElementById('nav-menu');
+    menu.classList.remove('show');
   });
 });
 
