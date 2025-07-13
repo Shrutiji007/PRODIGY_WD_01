@@ -412,3 +412,47 @@ form button {
   100% { transform: translateY(0); }
 }
 
+#navbar.scrolled {
+  background-color: #ffdef0; /* Slightly darker pink */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+nav ul li a.active {
+  color: #ff69b4;
+  border-bottom: 2px solid #ff69b4;
+}
+
+/* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    color: #ff4da6;
+    margin-left: auto;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffe4ec;
+    display: none; /* hidden by default */
+    margin-top: 1rem;
+  }
+
+  nav ul.show {
+    display: flex; /* show when toggled */
+  }
+
+  .nav-actions {
+    flex-direction: column;
+    width: 100%;
+    align-items: stretch;
+  }
+}
