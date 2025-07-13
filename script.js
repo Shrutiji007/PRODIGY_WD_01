@@ -244,31 +244,5 @@ document.querySelectorAll('nav ul li a').forEach(link => {
   });
 });
 
-/* Fix navbar layout for all screens */
-#navbar {
-  flex-wrap: nowrap; /* Prevent wrapping on desktop */
-  flex-direction: row;
-}
 
-/* Fix nav and buttons stacking on mobile */
-@media (max-width: 768px) {
-  #navbar {
-    flex-direction: column;
-    align-items: stretch;
-  }
 
-  .nav-actions {
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  .order-btn,
-  .profile-btn {
-    width: 100%;
-    padding: 0.75rem 1rem;
-  }
-
-  nav ul.show {
-    margin-bottom: 1rem;
-  }
-}
