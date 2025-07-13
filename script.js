@@ -1,5 +1,3 @@
-// Full-featured JS for Sweet Scoops 🍦
-
 const iceCreams = Array.from({ length: 20 }, (_, i) => {
   const names = [
     "Sakura Dream", "Choco Lava", "Gelato Affogato", "Dragon Fruit Chill",
