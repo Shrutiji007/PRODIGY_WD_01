@@ -1,4 +1,4 @@
-
+/* GLOBAL RESET */
 * {
   margin: 0;
   padding: 0;
@@ -46,7 +46,7 @@ p {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   z-index: 999;
   transition: all 0.3s ease-in-out;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* prevent wrapping */
 }
 
 .logo {
@@ -60,7 +60,6 @@ nav ul {
   display: flex;
   list-style: none;
   gap: 1.2rem;
-  flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -80,7 +79,6 @@ nav ul li a:hover {
   display: flex;
   align-items: center;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
 .order-btn, .profile-btn {
@@ -278,24 +276,6 @@ form button {
   font-family: 'Fredoka', sans-serif;
 }
 
-.checkbox-row {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin: 1rem auto;
-  max-width: 500px;
-  gap: 0.5rem;
-  font-family: 'Fredoka', sans-serif;
-  font-size: 1rem;
-}
-
-.checkbox-row input[type="checkbox"] {
-  width: 18px;
-  height: 18px;
-  accent-color: #ff69b4;
-  cursor: pointer;
-}
-
 /* SOCIALS */
 .socials {
   margin-top: 2rem;
@@ -313,47 +293,7 @@ form button {
   animation: fadeIn 1s ease both;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  #navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  nav ul {
-    flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
-  }
-
-  .nav-actions {
-    flex-direction: column;
-    align-items: stretch;
-    width: 100%;
-  }
-
-  .hero h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
-
-  .menu-grid,
-  .why-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .checkout-container {
-    flex-direction: column;
-  }
-
-  .checkout-box {
-    width: 100%;
-  }
-}
-
+/* FULLPAGE SECTION */
 .fullpage {
   min-height: 100vh;
   padding-top: 8rem;
@@ -391,6 +331,7 @@ form button {
   background: #ff85c1;
 }
 
+/* Footer */
 .site-footer {
   text-align: center;
   padding: 1.5rem 0;
@@ -402,6 +343,7 @@ form button {
   position: relative;
   z-index: 10;
 }
+
 .site-footer p {
   animation: floaty 3s ease-in-out infinite;
 }
@@ -412,8 +354,9 @@ form button {
   100% { transform: translateY(0); }
 }
 
+/* Navbar on scroll */
 #navbar.scrolled {
-  background-color: #ffdef0; /* Slightly darker pink */
+  background-color: #ffdef0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease-in-out;
 }
@@ -423,15 +366,20 @@ nav ul li a.active {
   border-bottom: 2px solid #ff69b4;
 }
 
-/* Hamburger hidden on desktop */
+/* Hamburger for Mobile */
 .hamburger {
   display: none;
   font-size: 2rem;
   cursor: pointer;
 }
 
-/* Mobile styles */
+/* Responsive Fixes */
 @media (max-width: 768px) {
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .hamburger {
     display: block;
     color: #ff4da6;
@@ -442,47 +390,44 @@ nav ul li a.active {
     flex-direction: column;
     width: 100%;
     background-color: #ffe4ec;
-    display: none; /* hidden by default */
+    display: none;
     margin-top: 1rem;
   }
 
   nav ul.show {
-    display: flex; /* show when toggled */
+    display: flex;
   }
 
   .nav-actions {
     flex-direction: column;
     width: 100%;
     align-items: stretch;
-  }
-}
-
-
-/* Fix navbar layout for all screens */
-#navbar {
-  flex-wrap: nowrap; /* Prevent wrapping on desktop */
-  flex-direction: row;
-}
-
-/* Fix nav and buttons stacking on mobile */
-@media (max-width: 768px) {
-  #navbar {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .nav-actions {
-    width: 100%;
     margin-top: 1rem;
   }
 
-  .order-btn,
-  .profile-btn {
+  .order-btn, .profile-btn {
     width: 100%;
     padding: 0.75rem 1rem;
   }
 
-  nav ul.show {
-    margin-bottom: 1rem;
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .menu-grid,
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-container {
+    flex-direction: column;
+  }
+
+  .checkout-box {
+    width: 100%;
   }
 }
