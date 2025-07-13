@@ -23,6 +23,30 @@
 
 ---
 
+
+## 📸 Screenshots
+
+### 🏠 Home Section
+![Home](screenshots/ss1.jpeg)
+
+### 🍧 Menu Section
+![Menu](screenshots/ss2.jpeg)
+
+### 💖 Why Us Section
+![Why Us](screenshots/ss3.jpeg)
+
+### 🛒 Cart Section
+![Cart](screenshots/ss4.jpeg)
+
+### 💳 Checkout Section
+![Checkout](screenshots/ss5.jpeg)
+
+### 📞 Contact Section
+![Contact](screenshots/ss6.jpeg)
+
+
+---
+
 ## 🧠 Tech Stack
 
 - HTML5  
