@@ -466,3 +466,53 @@ nav ul li a.active {
     width: 100%;
   }
 }
+
+.confetti {
+  position: fixed;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation-name: fall;
+  animation-timing-function: ease-in;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff85c1;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1rem;
+  z-index: 9999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: toastSlide 0.3s ease-in-out;
+}
+
+@keyframes toastSlide {
+  from {
+    transform: translateX(-50%) translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
