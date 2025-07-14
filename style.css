@@ -467,29 +467,6 @@ nav ul li a.active {
   }
 }
 
-.confetti {
-  position: fixed;
-  top: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  animation-name: fall;
-  animation-timing-function: ease-in;
-  z-index: 9999;
-}
-
-@keyframes fall {
-  0% {
-    transform: translateY(-10px) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
-  }
-}
-
-
 .toast {
   position: fixed;
   bottom: 2rem;
@@ -516,3 +493,28 @@ nav ul li a.active {
     opacity: 1;
   }
 }
+
+
+.confetti {
+  position: fixed;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation-name: fall;
+  animation-timing-function: ease-in;
+  z-index: 9999;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10px) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+

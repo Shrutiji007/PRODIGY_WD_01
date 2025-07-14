@@ -155,8 +155,8 @@ form?.addEventListener("submit", (e) => {
   e.preventDefault();
   showToast("🎉 Order placed!");
   cart = [];
-  renderCart();
   form.reset();
+  renderCart();
   fireConfetti();
 });
 
